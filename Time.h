@@ -25,7 +25,7 @@ public:
     int getHour() const;
     int getMinute() const;
 
-                                        //must be in form universal time before using either print function
+    //must be in form universal time before using either print function
     void printUniversal() const;        //print universal time (24 hour clock)
     void printStandard()const;          //print standard time (AM/PM)
 
