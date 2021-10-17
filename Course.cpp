@@ -43,23 +43,23 @@ Course& Course::setCourseUnits(int cUnits) {
 	return *this;
 }
 
-Course& Course::setDateStart(int mn, int dy, int yr) {
-	dateStart.setDate(mn, dy, yr);
+Course& Course::setDateStart(int month, int day, int year) {
+	dateStart.setDate(month, day, year);
 	return *this;
 }
 
-Course& Course::setDateEnd(int mn, int dy, int yr) {
-	dateEnd.setDate(mn, dy, yr);
+Course& Course::setDateEnd(int month, int day, int year) {
+	dateEnd.setDate(month, day, year);
 	return *this;
 }
 
-Course& Course::setTimeStart(int h, int m) {
-	timeStart.setTime(h, m);
+Course& Course::setTimeStart(int hour, int minute) {
+	timeStart.setTime(hour, minute);
 	return *this;
 }
 
-Course& Course::setTimeEnd(int h, int m) {
-	timeEnd.setTime(h, m);
+Course& Course::setTimeEnd(int hour, int minute) {
+	timeEnd.setTime(hour, minute);
 	return *this;
 }
 
