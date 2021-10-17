@@ -1,10 +1,11 @@
 #ifndef COURSE_H
 #define COURSE_H
 
-#include <string>
 #include "Time.h"
 #include "Date.h"
+#include <string>
 #include <iostream>
+using namespace std;
 
 class Course
 {
@@ -30,10 +31,10 @@ public:
 	Course& setCourseDays(string);
 	Course& setCourseUnits(int);
 
-	Course& setDateStart(int, int, int);
-	Course& setDateEnd(int, int, int);
-	Course& setTimeStart(int, int);		//0-23 (24 hour clock format)
-	Course& setTimeEnd(int, int);		//0-23 (24 hour clock format)
+	Course& setDateStart(int, int, int);	//input form (month, day, year)
+	Course& setDateEnd(int, int, int);		//input form (month, day, year)
+	Course& setTimeStart(int, int);		//input form (hour, minute) hour is 0-23, time is 0-59
+	Course& setTimeEnd(int, int);		//input form (hour, minute) hour is 0-23, time is 0-59
 
 	string getCourseNum() const;
 	string getCourseName() const;
@@ -46,7 +47,6 @@ public:
 	Time getTimeEnd() const;
 
 	double calcDailyFunction() const;
-	
 };
 
 #endif
