@@ -37,15 +37,15 @@ Time Time::standardToUniversal(string timeOfDay) {
     return *this;
 }
 
-Time::Time(int hour, int minute)
+Time::Time(int h, int m)
 {
-    setTime(hour, minute);
+    setTime(h, m);
 }
 
-Time& Time::setTime(int hour, int minute)
+Time& Time::setTime(int h, int m)
 {
-    setHour(hour);
-    setMinute(minute);
+    setHour(h);
+    setMinute(m);
     return *this;
 }
 
