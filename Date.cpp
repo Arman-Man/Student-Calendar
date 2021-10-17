@@ -40,21 +40,23 @@ Date::Date(int mn, int dy, int yr)
     setDate(mn, dy, yr);
 }
 
-void Date::setDate(int mn, int dy, int yr)
+Date& Date::setDate(int mn, int dy, int yr)
 {
     if (mn > 0 && mn <= 12)
     {
-        month = mn;
+        setMonth(mn);
     }
 
     else
     {
-        month = 1;
+        setMonth(1);
     }
 
-    year = yr;  //could also validate year
+    setYear(yr);  //could also validate year
 
-    day = checkDay(dy);  //to validate the day
+    setDay(checkDay(dy));  //to validate the day
+
+    return *this;
 }
 
 Date& Date::setMonth(int mn) {
