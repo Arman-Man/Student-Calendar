@@ -13,12 +13,12 @@ class Time
 private:
     int hour;       //0-23 (24 hour clock format)
     int minute;     //0-59
-    Time standardToUniversal(string);  //utility function, convert standard time to universal time, enter "am" or "pm" as parameter
+    Time standardToUniversal(string);  //enter "am" if hour is 0-11, enter "pm" if hour is 12-23
 
 public:
     Time(int = 0, int = 0);
 
-    Time& setTime(int, int);
+    Time& setTime(int, int);    //input form (hour, minute) hour is 0-23, time is 0-59
     Time& setHour(int);
     Time& setMinute(int);
 
