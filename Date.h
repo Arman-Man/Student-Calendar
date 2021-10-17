@@ -19,8 +19,8 @@ private:
 
 public:
     Date(int = 1, int = 1, int = 1990);
-    void setDate(int, int, int);
 
+    Date& setDate(int, int, int);
     Date& setMonth(int);
     Date& setDay(int);
     Date& setYear(int);
