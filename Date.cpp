@@ -52,7 +52,7 @@ Date& Date::setDate(int mn, int dy, int yr)
         setMonth(1);
     }
 
-    setYear(yr);  //could also validate year
+    setYear(yr);
 
     setDay(checkDay(dy));  //to validate the day
 
