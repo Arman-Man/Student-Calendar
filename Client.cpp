@@ -27,10 +27,9 @@ int main()
 	Semester studentSemester(studentName, startDate, endDate);
 	CourseSchedule studentCourseSchedule(studentName, studentSemester, maxSize);
 
-	selection = 'P'; //just a random char to start the while loop
-	
-	while (selection != 'Q' && selection != 'q')
-	{
+	//selection = 'P'; //just a random char to start the while loop
+
+		do {
 		cout << "COURSE ENTRY MENU FOR: " << studentSemester << endl
 			<< "----------------------------------------------------" << endl
 			<< "1) Enter a new course" << endl
@@ -59,15 +58,15 @@ int main()
 				cout << "Please enter course name: ";
 				getline(cin, courseName);
 				cout << "Please enter course unit(s): ";
-				cin >> courseUnits;
 				cin.ignore();
+				cin >> courseUnits;
 				cout << "Please enter class meeting days: ";
 				cin >> classDays;
 				cout << "Please enter class starting time (xx:xxAM/PM hour/minuteAM/PM): ";
 				cin >> startTime;
 				cout << "Please enter class ending time (xx:xxAM/PM hour/minuteAM/PM): ";
 				cin >> endTime;
-				cout << "Please enter start date (xx/xx/xxxx month/day/year): )";
+				cout << "Please enter start date (xx/xx/xxxx month/day/year): ";
 				cin >> startDateInput;
 				cout << "Please enter end date (xx/xx/xxxx month/day/year): ";
 				cin >> endDateInput;
@@ -93,21 +92,22 @@ int main()
 			{
 				cout << "\nYour schedule is empty now! There is NO course to be removed!" << endl;
 			}
+			else {
+				cout << "Enter the course number you want to remove: ";
+				getline(cin, courseNum);
+				cout << "Enter the course name you want to remove: ";
+				getline(cin, courseName);
 
-			cout << "Enter the course number you want to remove: ";
-			getline(cin, courseNum);
-			cout << "Enter the course name you want to remove: ";
-			getline(cin, courseName);
+				Course courseRemove(courseNum, courseName);
 
-			Course courseRemove(courseNum, courseName);
-
-			if (studentCourseSchedule.removeCourse(courseRemove))
-			{
-				cout << "Course removed successfully!" << endl;
-			}
-			else
-			{
-				cout << "Invalid input!" << endl;
+				if (studentCourseSchedule.removeCourse(courseRemove))
+				{
+					cout << "Course removed successfully!" << endl;
+				}
+				else
+				{
+					cout << "Invalid input!" << endl;
+				}
 			}
 		}
 
@@ -125,7 +125,8 @@ int main()
 		{
 			cout << "Invalid selection! Enter again: ";
 		}
-	}
+
+		} while (selection != 'Q' && selection != 'q');
 
 	return 0;
 }
