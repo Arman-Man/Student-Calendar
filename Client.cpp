@@ -71,7 +71,7 @@ int main()
 			}
 			Course studentCourse(courseNum, courseName, classDays, courseUnits, startDateInput, endDateInput, startTime, endTime);
 
-			if (studentCourseSchedule.addCourse(studentCourse) == true) //main issue
+			if (studentCourseSchedule.addCourse(studentCourse) == true)
 			{
 				cout << "Course added!" << endl;
 			}

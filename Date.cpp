@@ -111,7 +111,7 @@ bool Date::operator==(const Date& right) const {
 }
 
 bool Date::operator<(const Date& right) const {
-    return !(*this > right);
+    return !(*this > right || *this == right);
 }
 
 bool Date::operator>=(const Date& right) const {

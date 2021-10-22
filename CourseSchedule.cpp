@@ -7,7 +7,7 @@ bool CourseSchedule::checkDates(const Semester& semester, const Date& starting, 
 	{
 		return false; //if the starting date of this course is ahead of the semester starting date, reture false
 	}
-	else if (ending > semester.getEndDate())
+	else if (semester.getEndDate() < ending)
 	{
 		return false;//if the ending date of this course is behind the semester date, then return false
 	}
