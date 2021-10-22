@@ -15,7 +15,7 @@ private:
     int day; //1-31 depending on month
     int year; //any year
 
-    int checkDay(int) const;    //utility function to check if day is proper for monthand year
+    int checkDay(int) const;    //utility function to check if day is proper for month and year
 
 public:
     Date(int = 1, int = 1, int = 1990);
