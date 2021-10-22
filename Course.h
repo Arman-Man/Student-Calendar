@@ -48,4 +48,4 @@ public:
 	double calcDailyFunction() const;
 };
 
-#endif
+#endif#pragma once

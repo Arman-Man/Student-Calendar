@@ -18,8 +18,8 @@ private:
 public:
     Time(int = 0, int = 0);
 
-    Time& setTime(int, int);     //input form (hour, minute) hour is 0-23, time is 0-59
-    Time& setHour(int);          //input form (hour, minute) hour is 0-23, time is 0-59
+    Time& setTime(int, int);    //input form (hour, minute) hour is 0-23, time is 0-59
+    Time& setHour(int);
     Time& setMinute(int);
 
     int getHour() const;
