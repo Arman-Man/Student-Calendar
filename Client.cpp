@@ -60,6 +60,7 @@ int main()
 				cout << "Please enter course unit(s): ";
 				cin.ignore();
 				cin >> courseUnits;
+				cin.ignore();
 				cout << "Please enter class meeting days: ";
 				cin >> classDays;
 				cout << "Please enter class starting time (xx:xxAM/PM hour/minuteAM/PM): ";
