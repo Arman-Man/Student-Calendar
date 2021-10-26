@@ -17,7 +17,7 @@ private:
 	Date endDate;
 
 public:
-	Semester(const string&, const Date & = Date(), const Date & = Date());
+	Semester(const string&, const Date& = Date(), const Date& = Date());
 	Semester();
 	void setSemesterName(string&);
 	void setStartDate(int, int, int);

@@ -38,4 +38,4 @@ public:
 
 };
 
-#endif#pragma once
+#endif

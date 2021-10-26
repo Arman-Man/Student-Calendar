@@ -21,8 +21,8 @@ private:
 	Time timeEnd;
 
 public:
-	Course(const string& cNum = "None", const string& cName = "None", const string& cDays = "None", int cUnits = 0,
-		const Date& dStart = Date(), const Date& dEnd = Date(), const Time& tStart = Time(), const Time& tEnd = Time());
+	Course(const string& = "None", const string& = "None", const string& = "None", int = 0,
+		const Date& = Date(), const Date& = Date(), const Time& = Time(), const Time& = Time());
 	~Course();
 
 	Course& setCourseNum(string);
@@ -48,5 +48,5 @@ public:
 	double calcDailyFunction() const;
 };
 
-#endif#pragma once
+#endif
 

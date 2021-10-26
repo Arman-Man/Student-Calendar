@@ -21,14 +21,14 @@ int main()
 	cin >> startDate;
 	cout << "Please enter the ending date (xx/xx/xxxx momth/day/year): ";
 	cin >> endDate;
-	cout << "What's the maximum number of classes allowed to take: ";
+	cout << "What's the maximum number of courses allowed to take: ";
 	cin >> maxSize;
 
 	Semester studentSemester(studentName, startDate, endDate);
 	CourseSchedule studentCourseSchedule(studentName, studentSemester, maxSize);
 
 		do {
-		cout << "COURSE ENTRY MENU FOR: " << studentSemester << endl
+		cout << "\nCOURSE ENTRY MENU FOR: " << studentSemester
 			<< "----------------------------------------------------" << endl
 			<< "1) Enter a new course" << endl
 			<< "2) Remove a course" << endl
@@ -52,18 +52,19 @@ int main()
 			else
 			{
 				cout << "Please enter course number: ";
+				cin.ignore();
 				getline(cin, courseNum);
 				cout << "Please enter course name: ";
 				getline(cin, courseName);
 				cout << "Please enter course unit(s): ";
 				cin >> courseUnits;
-				cin.ignore();
 				cout << "Please enter class meeting days: ";
-				cin >> classDays;
+				cin.ignore();
+				getline(cin, classDays);
 				cout << "Please enter class starting time (xx:xxAM/PM hour/minuteAM/PM): ";
-				cin >> startTime;
-				cout << "Please enter class ending time (xx:xxAM/PM hour/minuteAM/PM): ";
-				cin >> endTime;
+				cin >> startTime;															
+				cout << "Please enter class ending time (xx:xxAM/PM hour/minuteAM/PM): ";	
+				cin >> endTime;															
 				cout << "Please enter start date (xx/xx/xxxx month/day/year): ";
 				cin >> startDateInput;
 				cout << "Please enter end date (xx/xx/xxxx month/day/year): ";

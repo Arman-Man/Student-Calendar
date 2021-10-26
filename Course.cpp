@@ -7,16 +7,18 @@ ostream& operator<<(ostream& output, const Course& obj) {
 		<< "Course Dates: " << obj.getDateStart() << " - " << obj.getDateEnd() << endl
 		<< "Meeting Days: " << obj.getCourseDays() << endl
 		<< "Meeting Time: " << obj.getTimeStart() << " - " << obj.getTimeEnd() << endl
-		<< "Daily Duration: " << obj.calcDailyFunction()
+		<< "Daily Duration: " << fixed << setprecision(2) << obj.calcDailyFunction()
 		<< " hours" << endl;
 	return output;
 }
 
 Course::Course(const string& cNum, const string& cName, const string& cDays, int cUnits,
 	const Date& dStart, const Date& dEnd, const Time& tStart, const Time& tEnd) :
-	courseNum(cNum), courseName(cName), courseDays(cDays), courseUnits(cUnits),
 	dateStart(dStart), dateEnd(dEnd), timeStart(tStart), timeEnd(tEnd) {
-	//empty constructor body
+	setCourseNum(cNum);
+	setCourseName(cName);
+	setCourseDays(cDays);
+	setCourseUnits(cUnits);
 }
 
 Course::~Course() {
@@ -93,5 +95,5 @@ Time Course::getTimeEnd() const {
 }
 
 double Course::calcDailyFunction() const {
-	return (60.0 / 100.0) * double(abs(getTimeStart() - getTimeEnd()));
+	return double(abs(getTimeStart() - getTimeEnd()));
 }
