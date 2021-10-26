@@ -127,7 +127,7 @@ CourseSchedule::~CourseSchedule()
 ostream& operator<<(ostream& output, const CourseSchedule& schedule)
 {
 	// TODO: insert return statement here
-	output << "\n Your Class Schedule: \n"
+	output << "\nYour Class Schedule: \n"
 		<< "=================================="
 		<< "\nName: " << schedule.getStudentName() << endl
 		<< "Number of courses: " << schedule.getNumCourse() << endl
