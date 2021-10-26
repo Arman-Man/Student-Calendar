@@ -17,7 +17,7 @@ bool CourseSchedule::checkDates(const Semester& semester, const Date& starting, 
 	}
 }
 
-CourseSchedule::CourseSchedule(const string& nameInput,const Semester& semInfo, const int& maxNum)
+CourseSchedule::CourseSchedule(const string& nameInput, const Semester& semInfo, const int& maxNum)
 {
 	this->studentName = nameInput;
 	this->studentSemester = semInfo;
@@ -30,7 +30,6 @@ CourseSchedule::CourseSchedule()
 {
 	this->studentName = "";
 	this->maxSize = 0;
-
 }
 
 string CourseSchedule::getStudentName() const
@@ -75,7 +74,7 @@ bool CourseSchedule::addCourse(const Course& course)
 			return true;
 		}
 
-		else 
+		else
 		{
 			return false;//exceed semester date duration
 		}
@@ -86,13 +85,13 @@ bool CourseSchedule::addCourse(const Course& course)
 	}
 }
 
-bool CourseSchedule::removeCourse(const Course& courseToRemove )
+bool CourseSchedule::removeCourse(const Course& courseToRemove)
 {
 	// TODO: insert return statement here
 	if (numCourses >= 1)
 	{
 		int index = -1;
-		
+
 		for (int i = 0; i < numCourses; ++i)
 		{
 			if (coursePtr[i].getCourseNum() == courseToRemove.getCourseNum() && coursePtr[i].getCourseName() == courseToRemove.getCourseName())
@@ -111,7 +110,7 @@ bool CourseSchedule::removeCourse(const Course& courseToRemove )
 			--numCourses; //and delete the last course
 			return true;
 		}
-		
+
 	}
 	else
 	{
@@ -130,8 +129,8 @@ ostream& operator<<(ostream& output, const CourseSchedule& schedule)
 	// TODO: insert return statement here
 	output << "\n Your Class Schedule: \n"
 		<< "=================================="
-		<< "Name: " << schedule.getStudentName() << endl
-		<< "Number of class(es): " << schedule.getNumCourse() << endl
+		<< "\nName: " << schedule.getStudentName() << endl
+		<< "Number of courses: " << schedule.getNumCourse() << endl
 		<< "-----------------------------------" << endl;
 
 	for (int i = 0; i < schedule.getNumCourse(); ++i)

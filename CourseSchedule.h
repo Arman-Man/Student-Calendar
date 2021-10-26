@@ -25,7 +25,7 @@ public:
 	CourseSchedule();
 	string getStudentName() const;
 	Semester getStudentSemester() const;
-	int getNumCourse () const;
+	int getNumCourse() const;
 
 	void setStudentName(string);
 	bool addCourse(const Course&);

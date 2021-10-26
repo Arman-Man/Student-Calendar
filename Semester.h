@@ -11,13 +11,13 @@ class Semester
 	friend ostream& operator<<(ostream&, const Semester&); //overload << operator
 	friend istream& operator>>(istream&, Semester&);       //overload >> operator
 
-private: 
+private:
 	string semesterName;
 	Date startDate;
 	Date endDate;
 
 public:
-	Semester(const string&, const Date& = Date(), const Date& = Date ());
+	Semester(const string&, const Date & = Date(), const Date & = Date());
 	Semester();
 	void setSemesterName(string&);
 	void setStartDate(int, int, int);
