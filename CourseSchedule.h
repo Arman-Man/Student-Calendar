@@ -3,8 +3,6 @@
 #include <iostream>
 #include "Semester.h"
 #include "Course.h"
-#include "Date.h"
-#include "Time.h"
 
 using namespace std;
 
