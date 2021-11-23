@@ -1,4 +1,4 @@
-# Student-Course-Schedule
+# Student-Calendar
 
 Create a student schedule using semester and course information. Includes commands to add/delete courses and to display the schedule.
 
