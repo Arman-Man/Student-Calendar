@@ -1,6 +1,6 @@
 # Student-Calendar
 
-Create a student schedule using semester and course information. Includes commands to add/delete courses and to display the schedule.
+Create an academic calendar for students. Keeps track of course and term information including start/end times, daily duration, course/term start/end dates, course units and total term units. Calendar be edited to add/remove courses or display the overall schedule.
 
 Semester information: User name, semester name, semester start date, semester end date, maximum number of courses
 - semester end date must be after semester start date
